@@ -61,3 +61,9 @@ a:link{
 a:hover{
     text-decoration: underline;
 }
+
+#githubIcon{
+    color: black;
+    width: 20px;
+    height: 20px;;
+}
