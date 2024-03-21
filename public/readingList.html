@@ -1,93 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>Jayden Wong - Reading List</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>Jayden Wong</h1>
-        <p>Jayden Wong</p>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="readingList.html">Reading List</a></li>
-            </ul>
-        </nav>
+      <h1>Jayden Wong</h1>
+      <p>Jayden Wong</p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="readingList.html">Reading List</a></li>
+        </ul>
+      </nav>
     </header>
 
     <section id="readingList"></section>
     <ul>
-        <li>Static Analysis</li>
-        <ul>
-            <li>
-                <!-- add checked="checked" to checkbox element when finished reading -->
-                <input type="checkbox" onclick="return false;"/>
-                <a href="https://research.facebook.com/publications/scaling-static-analyses-at-facebook/">
-                    Scaling Static Analysis at Facebook</a>
-            </li>
-            <li><input type="checkbox" onclick="return false;"/>
-                <a href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43322.pdf">Tricorder:
-                    Building a Program Analysis Ecosystem</a>
-            </li>
-            <li><input type="checkbox" onclick="return false;"/>
-                <a href="https://web.stanford.edu/~engler/BLOC-coverity.pdf">A Few Billion Lines of Code Later Using Static
-                    Analysis to Find Bugs
-                    in the Real World
-                </a>
-            </li>
-            <li><input type="checkbox" onclick="return false;"/>
-                <a
-                    href="https://www.microsoft.com/en-us/research/uploads/prod/2016/07/What-Developers-Want-and-Need-from-Program-Analysis-An-Empirical-Study.pdf">What
-                    Developers Want and Need from Program Analysis: An Empirical
-                    Study</a>
-            </li>
-            <li><input type="checkbox" onclick="return false;"/>
-                <a href="https://securitylab.github.com/research/CVE-2020-6449-exploit-chrome-uaf/">Use-after-free Bugs</a>
-            </li>
-            <li><input type="checkbox" onclick="return false;"/>
-                <a href="https://www.synacktiv.com/en/publications/exploitation-of-a-double-free-vulnerability-in-ubuntu-shiftfs-driver-cve-2021-3492.html">Double Free Bugs</a>
-            </li>
-        </ul>
-        <li>Fuzzing</li>
-        <ul>
-            <li><input type="checkbox" onclick="return false;"/>
-                <a
-                    href="https://queue.acm.org/detail.cfm?id=2094081">Whitebox Fuzzing for Security Testing</a>
-            </li>
-            <li><input type="checkbox" onclick="return false;"/>
-                <a href="https://security.googleblog.com/2016/08/guided-in-process-fuzzing-of-chrome.html">Guided in-process fuzzing of Chrome components</a>
-            </li>
-            <li><input type="checkbox" onclick="return false;"/>
-                <a href="https://security.googleblog.com/2020/">How the Atheris Python Fuzzer Works</a>
-            </li>
-            <li><input type="checkbox" onclick="return false;"/>
-                <a href="https://www.paradyn.org/papers/fuzz.pdf">An Empirical Study of the Reliability of UNIX Utilities</a>
-            </li>
-            <li><input type="checkbox" onclick="return false;"/>
-                <a href="https://www.dependability.org/?p=406">Miller, Fredriksen, and So win the 2022 Jean-Claude Laprie Award</a>
-            </li>
-        </ul>
-        <li>Misc.</li>
-        <ul>
-            <li>
-                <input type="checkbox" onclick="return false;"/>
-                <a href="http://bearcave.com/misl/misl_tech/wavelets/compression/shannon.html">Shannon Entropy</a>
-            </li>
-        </ul>
-        
+      <li>Static Analysis</li>
+      <ul>
+        <li>
+          <!-- add checked="checked" to checkbox element when finished reading -->
+          <input type="checkbox" onclick="return false;" />
+          <a
+            href="https://research.facebook.com/publications/scaling-static-analyses-at-facebook/"
+          >
+            Scaling Static Analysis at Facebook</a
+          >
+        </li>
+        <li>
+          <input type="checkbox" onclick="return false;" />
+          <a
+            href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43322.pdf"
+            >Tricorder: Building a Program Analysis Ecosystem</a
+          >
+        </li>
+        <li>
+          <input type="checkbox" onclick="return false;" />
+          <a href="https://web.stanford.edu/~engler/BLOC-coverity.pdf"
+            >A Few Billion Lines of Code Later Using Static Analysis to Find
+            Bugs in the Real World
+          </a>
+        </li>
+        <li>
+          <input type="checkbox" onclick="return false;" />
+          <a
+            href="https://www.microsoft.com/en-us/research/uploads/prod/2016/07/What-Developers-Want-and-Need-from-Program-Analysis-An-Empirical-Study.pdf"
+            >What Developers Want and Need from Program Analysis: An Empirical
+            Study</a
+          >
+        </li>
+        <li>
+          <input type="checkbox" onclick="return false;" />
+          <a
+            href="https://securitylab.github.com/research/CVE-2020-6449-exploit-chrome-uaf/"
+            >Use-after-free Bugs</a
+          >
+        </li>
+        <li>
+          <input type="checkbox" onclick="return false;" />
+          <a
+            href="https://www.synacktiv.com/en/publications/exploitation-of-a-double-free-vulnerability-in-ubuntu-shiftfs-driver-cve-2021-3492.html"
+            >Double Free Bugs</a
+          >
+        </li>
+        <li>
+            <input type="checkbox" onclick="return false;" />
+            <a
+            href="https://github.com/Z3Prover/z3/wiki#background"
+            >Programming Z3</a>
+        </li>
+        <li>
+            <input type="checkbox" onclick="return false;" />
+            <a
+            href="https://z3prover.github.io/papers/z3internals.html"
+            >Z3 Internals</a>
+        </li>
+      </ul>
+      <li>Fuzzing</li>
+      <ul>
+        <li>
+          <input type="checkbox" onclick="return false;" />
+          <a href="https://queue.acm.org/detail.cfm?id=2094081"
+            >Whitebox Fuzzing for Security Testing</a
+          >
+        </li>
+        <li>
+          <input type="checkbox" onclick="return false;" />
+          <a
+            href="https://security.googleblog.com/2016/08/guided-in-process-fuzzing-of-chrome.html"
+            >Guided in-process fuzzing of Chrome components</a
+          >
+        </li>
+        <li>
+          <input type="checkbox" onclick="return false;" />
+          <a href="https://security.googleblog.com/2020/"
+            >How the Atheris Python Fuzzer Works</a
+          >
+        </li>
+        <li>
+          <input type="checkbox" onclick="return false;" />
+          <a href="https://www.paradyn.org/papers/fuzz.pdf"
+            >An Empirical Study of the Reliability of UNIX Utilities</a
+          >
+        </li>
+        <li>
+          <input type="checkbox" onclick="return false;" />
+          <a href="https://www.dependability.org/?p=406"
+            >Miller, Fredriksen, and So win the 2022 Jean-Claude Laprie Award</a
+          >
+        </li>
+      </ul>
+      <li>Misc.</li>
+      <ul>
+        <li>
+          <input type="checkbox" onclick="return false;" />
+          <a
+            href="http://bearcave.com/misl/misl_tech/wavelets/compression/shannon.html"
+            >Shannon Entropy</a
+          >
+        </li>
+      </ul>
     </ul>
     <footer>
-        <p>&copy; 2023 Jayden Wong</p>
+      <p>&copy; 2023 Jayden Wong</p>
     </footer>
 
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>
