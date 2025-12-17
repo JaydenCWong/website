@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { getYouTubeThumbnail } from "$lib/types/courses";
+
     interface Props {
         title: string;
         description?: string;
@@ -6,9 +8,21 @@
         link: string;
         type: "worksheet" | "video" | "external";
         onclick?: () => void;
+        showThumbnail?: boolean;
     }
 
-    let { title, description, duration, link, type, onclick }: Props = $props();
+    let {
+        title,
+        description,
+        duration,
+        link,
+        type,
+        onclick,
+        showThumbnail = true,
+    }: Props = $props();
+
+    const thumbnail =
+        type === "video" && showThumbnail ? getYouTubeThumbnail(link) : null;
 </script>
 
 {#if type === "video" && onclick}
@@ -19,11 +33,37 @@
                 <p class="resource-meta">{duration}</p>
             {/if}
         </div>
-        <div class="resource-action play-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <polygon points="5 3 19 12 5 21 5 3" />
-            </svg>
-        </div>
+        {#if thumbnail}
+            <div class="thumbnail-container">
+                <img
+                    src={thumbnail}
+                    alt={title}
+                    class="thumbnail"
+                    loading="lazy"
+                />
+                <div class="thumbnail-overlay">
+                    <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <polygon points="5 3 19 12 5 21 5 3" />
+                    </svg>
+                </div>
+            </div>
+        {:else}
+            <div class="resource-action play-icon">
+                <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                >
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                </svg>
+            </div>
+        {/if}
     </button>
 {:else}
     <a
@@ -98,6 +138,7 @@
         transition: all var(--transition-base);
         text-decoration: none;
         color: inherit;
+        gap: var(--space-md);
     }
 
     .resource-card:hover {
@@ -112,14 +153,54 @@
         font-family: inherit;
     }
 
+    .thumbnail-container {
+        position: relative;
+        height: 48px;
+        aspect-ratio: 16 / 9;
+        border-radius: var(--radius-sm);
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .thumbnail {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform var(--transition-base);
+    }
+
+    .video-card:hover .thumbnail {
+        transform: scale(1.1);
+    }
+
+    .thumbnail-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.4);
+        color: white;
+        opacity: 0;
+        transition: opacity var(--transition-fast);
+    }
+
+    .video-card:hover .thumbnail-overlay {
+        opacity: 1;
+    }
+
     .resource-info {
         flex: 1;
+        min-width: 0;
     }
 
     .resource-title {
         font-size: var(--font-size-base);
         font-weight: 600;
         margin-bottom: var(--space-xs);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .resource-description,
@@ -147,6 +228,7 @@
         background: rgba(59, 130, 246, 0.1);
         border-radius: 50%;
         transition: all var(--transition-fast);
+        flex-shrink: 0;
     }
 
     .video-card:hover .play-icon {
@@ -157,6 +239,10 @@
     @media (max-width: 768px) {
         .resource-card {
             padding: var(--space-md);
+        }
+
+        .thumbnail-container {
+            height: 40px;
         }
     }
 </style>
