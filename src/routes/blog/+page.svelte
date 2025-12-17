@@ -4,6 +4,7 @@
 
     // Define posts statically for now - simple and maintainable
     // When adding a new post, just add it to this array
+    // The 'content' field contains searchable keywords from the post body
     const posts = [
         {
             slug: "four-billion-if-statements",
@@ -12,6 +13,8 @@
             excerpt:
                 "A programmer takes a joke from TikTok to its logical extreme, revealing fascinating insights about problem-solving, limitations, and creative workarounds.",
             tags: ["programming", "problem-solving"],
+            content:
+                "Andreas Karlsson TikTok mass programming absurdity code bloat file size compiler optimization floating point IEEE 754 binary representation LLVM x86 assembly branchless programming bit manipulation CPU pipeline creative problem solving",
         },
         {
             slug: "failure-and-learning",
@@ -20,6 +23,8 @@
             excerpt:
                 "Failure in video games mirrors failure in learning. Both require struggle to create meaning, and both need careful scaffolding to keep us in the zone of productive challenge.",
             tags: ["teaching", "learning", "study-tips"],
+            content:
+                "Razbuten Failure is Weird video essay games gaming stakes success struggle learning uncomfortable misconceptions Zone of Proximal Development ZPD Vygotsky scaffolding teachers game designers optimal strategy exploration aha moment",
         },
         {
             slug: "welcome",
@@ -28,20 +33,23 @@
             excerpt:
                 "Hello and welcome! This is the first post on my teaching blog where I'll share insights, tips, and resources for math students.",
             tags: ["general", "welcome"],
+            content:
+                "introduction first post math teacher tutor resources tips students education",
         },
     ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
     // Configure Fuse.js for fuzzy search
     const fuse = new Fuse(posts, {
         keys: [
-            { name: "title", weight: 0.4 },
-            { name: "excerpt", weight: 0.3 },
-            { name: "tags", weight: 0.3 },
+            { name: "title", weight: 0.35 },
+            { name: "excerpt", weight: 0.25 },
+            { name: "content", weight: 0.25 },
+            { name: "tags", weight: 0.15 },
         ],
-        threshold: 0.4, // 0 = exact match, 1 = match anything (0.4 is good balance)
+        threshold: 0.2, // 0 = exact match, 1 = match anything (0.2 is stricter)
         includeScore: true,
         ignoreLocation: true, // Search entire string, not just beginning
-        minMatchCharLength: 2, // Minimum characters before matching
+        minMatchCharLength: 3, // Minimum 3 characters before matching
     });
 
     // Get tags that are actually used in posts

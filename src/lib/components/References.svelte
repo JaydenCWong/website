@@ -7,9 +7,9 @@
 
     let { ids }: Props = $props();
 
-    const refs = ids
-        .map((id) => ({ id, ...references[id] }))
-        .filter((r) => r.author);
+    const refs = $derived(
+        ids.map((id) => ({ id, ...references[id] })).filter((r) => r.author),
+    );
 </script>
 
 {#if refs.length > 0}

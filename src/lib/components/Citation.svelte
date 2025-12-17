@@ -7,7 +7,7 @@
 
     let { id }: Props = $props();
 
-    const ref = references[id];
+    const ref = $derived(references[id]);
 </script>
 
 {#if ref}

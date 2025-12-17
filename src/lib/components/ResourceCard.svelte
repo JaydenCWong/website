@@ -21,8 +21,9 @@
         showThumbnail = true,
     }: Props = $props();
 
-    const thumbnail =
-        type === "video" && showThumbnail ? getYouTubeThumbnail(link) : null;
+    const thumbnail = $derived(
+        type === "video" && showThumbnail ? getYouTubeThumbnail(link) : null,
+    );
 </script>
 
 {#if type === "video" && onclick}
