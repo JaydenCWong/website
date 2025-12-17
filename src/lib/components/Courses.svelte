@@ -7,10 +7,13 @@
             href: "/courses/math-10",
             icon: "📐",
             topics: [
-                "Linear Relations",
-                "Polynomials",
-                "Trigonometry",
                 "Measurement",
+                "Trigonometry",
+                "Factors and Products",
+                "Roots and Powers",
+                "Relations and Functions",
+                "Linear Functions",
+                "Systems of Linear Equations",
             ],
         },
         {
@@ -19,7 +22,15 @@
                 "Pre-Calculus and Calculus 12 - BC Curriculum. Advanced mathematics including limits, derivatives, and integrals.",
             href: "/courses/calc-12",
             icon: "∫",
-            topics: ["Limits", "Derivatives", "Integrals", "Applications"],
+            topics: [
+                "Limits and Derivatives",
+                "Differentiation Rules",
+                "Applications of Differentiation",
+                "Integrals",
+                "Applications of Integration",
+                "Techniques of Integration",
+                "Differential Equations",
+            ],
         },
     ];
 </script>

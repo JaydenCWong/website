@@ -1,40 +1,26 @@
 <script lang="ts">
     import Footer from "$lib/components/Footer.svelte";
+    import VideoModal from "$lib/components/VideoModal.svelte";
+    import ChapterSection from "$lib/components/ChapterSection.svelte";
+    import ResourceCard from "$lib/components/ResourceCard.svelte";
+    import { chapters, miscResources, type Resource } from "./data";
 
-    const worksheets = [
-        {
-            title: "Chapter 1 - Limits",
-            description: "Practice problems on limits and continuity",
-            link: "#",
-        },
-        {
-            title: "Chapter 2 - Derivatives",
-            description: "Differentiation rules and applications",
-            link: "#",
-        },
-    ];
+    // Modal state for video player
+    let selectedVideo = $state<Resource | null>(null);
 
-    const videos = [
-        { title: "Introduction to Limits", duration: "18:30", link: "#" },
-        {
-            title: "The Power Rule for Derivatives",
-            duration: "14:15",
-            link: "#",
-        },
-    ];
+    function openVideoModal(video: Resource) {
+        selectedVideo = video;
+        document.body.style.overflow = "hidden";
+    }
 
-    const misc = [
-        {
-            title: "Desmos Graphing Calculator",
-            description: "Desmos Graphing Calculator",
-            link: "https://www.desmos.com/calculator",
-            external: true,
-        },
-    ];
+    function closeVideoModal() {
+        selectedVideo = null;
+        document.body.style.overflow = "";
+    }
 </script>
 
 <svelte:head>
-    <title>Calculus 12 | Jayden Wong</title>
+    <title>Calculus 12 | Mr. Wong</title>
     <meta
         name="description"
         content="Calculus 12 course resources - worksheets, videos, and practice materials"
@@ -68,146 +54,36 @@
 
 <section class="section resources">
     <div class="container">
-        <div class="resources-grid">
-            <!-- Worksheets Section -->
-            <div class="resource-section">
-                <h2 class="resource-section-title">
-                    <span class="resource-icon">📄</span>
-                    Worksheets
-                </h2>
-                <div class="resource-list">
-                    {#each worksheets as worksheet}
-                        <a href={worksheet.link} class="resource-card">
-                            <div class="resource-info">
-                                <h3 class="resource-title">
-                                    {worksheet.title}
-                                </h3>
-                                <p class="resource-description">
-                                    {worksheet.description}
-                                </p>
-                            </div>
-                            <div class="resource-action">
-                                <svg
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                >
-                                    <path
-                                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-                                    />
-                                    <polyline points="7 10 12 15 17 10" />
-                                    <line x1="12" y1="15" x2="12" y2="3" />
-                                </svg>
-                            </div>
-                        </a>
-                    {/each}
-                    {#if worksheets.length === 0}
-                        <div class="empty-state">
-                            <p>Worksheets coming soon!</p>
-                        </div>
-                    {/if}
-                </div>
-            </div>
-
-            <!-- Videos Section -->
-            <div class="resource-section">
-                <h2 class="resource-section-title">
-                    <span class="resource-icon">🎬</span>
-                    Video Lessons
-                </h2>
-                <div class="resource-list">
-                    {#each videos as video}
-                        <a href={video.link} class="resource-card">
-                            <div class="resource-info">
-                                <h3 class="resource-title">{video.title}</h3>
-                                <p class="resource-meta">{video.duration}</p>
-                            </div>
-                            <div class="resource-action">
-                                <svg
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                >
-                                    <polygon points="5 3 19 12 5 21 5 3" />
-                                </svg>
-                            </div>
-                        </a>
-                    {/each}
-                    {#if videos.length === 0}
-                        <div class="empty-state">
-                            <p>Videos coming soon!</p>
-                        </div>
-                    {/if}
-                </div>
-            </div>
-
-            <!-- Misc Resources Section -->
-            <div class="resource-section">
-                <h2 class="resource-section-title">
-                    <span class="resource-icon">🔧</span>
-                    Misc Resources
-                </h2>
-                <div class="resource-list">
-                    {#each misc as item}
-                        <a
-                            href={item.link}
-                            class="resource-card"
-                            target={item.external ? "_blank" : undefined}
-                            rel={item.external
-                                ? "noopener noreferrer"
-                                : undefined}
-                        >
-                            <div class="resource-info">
-                                <h3 class="resource-title">{item.title}</h3>
-                                <p class="resource-description">
-                                    {item.description}
-                                </p>
-                            </div>
-                            <div class="resource-action">
-                                {#if item.external}
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                    >
-                                        <path
-                                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                                        />
-                                        <polyline points="15 3 21 3 21 9" />
-                                        <line x1="10" y1="14" x2="21" y2="3" />
-                                    </svg>
-                                {:else}
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                    >
-                                        <path d="M5 12h14M12 5l7 7-7 7" />
-                                    </svg>
-                                {/if}
-                            </div>
-                        </a>
-                    {/each}
-                    {#if misc.length === 0}
-                        <div class="empty-state">
-                            <p>More resources coming soon!</p>
-                        </div>
-                    {/if}
-                </div>
-            </div>
+        <!-- Chapters -->
+        <div class="chapters-list">
+            {#each chapters as chapter}
+                <ChapterSection {chapter} onVideoClick={openVideoModal} />
+            {/each}
         </div>
+
+        <!-- Misc Resources Section -->
+        {#if miscResources.length > 0}
+            <div class="misc-section">
+                <h2 class="section-title-small">
+                    <span class="section-icon">🔧</span>
+                    Additional Resources
+                </h2>
+                <div class="resource-list">
+                    {#each miscResources as item}
+                        <ResourceCard
+                            title={item.title}
+                            description={item.description}
+                            link={item.link}
+                            type="external"
+                        />
+                    {/each}
+                </div>
+            </div>
+        {/if}
     </div>
 </section>
+
+<VideoModal video={selectedVideo} onclose={closeVideoModal} />
 
 <Footer />
 
@@ -265,25 +141,22 @@
         background: var(--color-bg-primary);
     }
 
-    .resources-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    .chapters-list {
+        display: flex;
+        flex-direction: column;
         gap: var(--space-2xl);
     }
 
-    .resource-section {
+    /* Misc section */
+    .misc-section {
+        margin-top: var(--space-2xl);
         background: var(--color-bg-card);
         border: 1px solid var(--color-border);
         border-radius: var(--radius-2xl);
         padding: var(--space-xl);
     }
 
-    /* Make last section span full width if odd number of sections */
-    .resource-section:last-child:nth-child(odd) {
-        grid-column: 1 / -1;
-    }
-
-    .resource-section-title {
+    .section-title-small {
         display: flex;
         align-items: center;
         gap: var(--space-md);
@@ -294,63 +167,19 @@
         border-bottom: 1px solid var(--color-border);
     }
 
-    .resource-icon {
+    .section-icon {
         font-size: 1.5rem;
     }
 
     .resource-list {
         display: flex;
         flex-direction: column;
-        gap: var(--space-md);
-    }
-
-    .resource-card {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: var(--space-md) var(--space-lg);
-        background: var(--color-bg-secondary);
-        border: 1px solid var(--color-border);
-        border-radius: var(--radius-lg);
-        transition: all var(--transition-base);
-    }
-
-    .resource-card:hover {
-        border-color: var(--color-accent);
-        background: rgba(59, 130, 246, 0.05);
-    }
-
-    .resource-title {
-        font-size: var(--font-size-base);
-        font-weight: 600;
-        margin-bottom: var(--space-xs);
-    }
-
-    .resource-description,
-    .resource-meta {
-        font-size: var(--font-size-sm);
-        color: var(--color-text-muted);
-    }
-
-    .resource-action {
-        color: var(--color-accent);
-        opacity: 0.7;
-        transition: opacity var(--transition-fast);
-    }
-
-    .resource-card:hover .resource-action {
-        opacity: 1;
-    }
-
-    .empty-state {
-        text-align: center;
-        padding: var(--space-2xl);
-        color: var(--color-text-muted);
+        gap: var(--space-sm);
     }
 
     @media (max-width: 768px) {
-        .resources-grid {
-            grid-template-columns: 1fr;
+        .misc-section {
+            padding: var(--space-lg);
         }
     }
 </style>
