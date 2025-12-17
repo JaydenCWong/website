@@ -80,7 +80,7 @@ export const miscResources: MiscResource[] = [
     {
         title: "Financial Literacy Simulator",
         description: "Interactive budgeting and financial planning tool",
-        link: "https://financial-literacy.pages.dev",
+        link: "https://financial-literacy-simulator.jaydenwong.ca",
         external: true,
     },
 ];
