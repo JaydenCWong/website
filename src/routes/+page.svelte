@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-    <title>Jayden Wong | Math Teacher & Developer</title>
+    <title>Mr. Wong | Math Teacher & Developer</title>
 </svelte:head>
 
 <Courses />

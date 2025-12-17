@@ -19,7 +19,7 @@
                 <h2 class="section-title">About Me</h2>
                 <div class="about-description">
                     <p>
-                        Hi! I'm <strong>Jayden Wong</strong>, a math teacher and
+                        Hi! I'm <strong>Mr. Wong</strong>, a math teacher and
                         software developer based in British Columbia, Canada.
                     </p>
                     <p>

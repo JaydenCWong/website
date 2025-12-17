@@ -6,7 +6,7 @@
     <div class="container hero-content">
         <div class="hero-text">
             <p class="hero-greeting">Hi, I'm</p>
-            <h1 class="hero-title">Jayden Wong</h1>
+            <h1 class="hero-title">Mr. Wong</h1>
             <p class="hero-subtitle">
                 Math Teacher & Software Developer based in British Columbia. I
                 teach

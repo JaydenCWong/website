@@ -89,14 +89,14 @@
 <svelte:head>
 	<meta
 		name="description"
-		content="Jayden Wong - Math Teacher & Software Developer"
+		content="Mr. Wong - Math Teacher & Software Developer"
 	/>
 </svelte:head>
 
 <nav class="nav">
 	<div class="container nav-content">
 		<a href="/" class="nav-logo">
-			<span class="nav-logo-text">Jayden Wong</span>
+			<span class="nav-logo-text">Mr. Wong</span>
 		</a>
 
 		<ul class="nav-links" class:open={mobileMenuOpen}>

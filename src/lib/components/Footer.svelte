@@ -10,7 +10,7 @@
 <footer class="footer">
     <div class="container footer-content">
         <div class="footer-brand">
-            <span class="footer-logo">Jayden Wong</span>
+            <span class="footer-logo">Mr. Wong</span>
             <p class="footer-tagline">Math Teacher & Developer</p>
         </div>
         <div class="footer-links">
@@ -55,7 +55,7 @@
     </div>
     <div class="footer-bottom">
         <div class="container">
-            <p>&copy; {currentYear} Jayden Wong. All rights reserved.</p>
+            <p>&copy; {currentYear} Mr. Wong. All rights reserved.</p>
         </div>
     </div>
 </footer>
