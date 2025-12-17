@@ -8,19 +8,47 @@ export const chapters: Chapter[] = [
         number: 1,
         name: "Measurement",
         worksheets: [],
-        videos: [],
+        videos: [
+            {
+                title: "Converting Units With Conversion Factors - Metric System Review & Dimensional Analysis by The Organic Chemistry Tutor",
+                duration: "38:41",
+                link: "https://www.youtube.com/watch?v=eK8gXP3pImU",
+            },
+            {
+                title: "Volume and Surface Area of a Cone & Lateral Area Formula- Basic Geometry by The Organic Chemistry Tutor",
+                duration: "13:47",
+                link: "https://www.youtube.com/watch?v=JN3LhO0YXw8",
+            },
+        ],
     },
     {
         number: 2,
         name: "Trigonometry",
         worksheets: [],
-        videos: [],
+        videos: [
+            {
+                title: "Trigonometry For Beginners by The Organic Chemistry Tutor",
+                duration: "24:35",
+                link: "https://www.youtube.com/watch?v=PUB0TaZ7bhA",
+            },
+            {
+                title: "Basic trigonometry by Khan Academy",
+                duration: "10:39",
+                link: "https://www.youtube.com/watch?v=Jsiy4TxgIME",
+            },
+        ],
     },
     {
         number: 3,
         name: "Factors and Products",
         worksheets: [],
-        videos: [],
+        videos: [
+            {
+                title: "Factoring Trinomials & Polynomials, Basic Introduction by The Organic Chemistry Tutor",
+                duration: "59:11",
+                link: "https://www.youtube.com/watch?v=-4jANGlJRSY",
+            },
+        ],
     },
     {
         number: 4,
@@ -44,6 +72,11 @@ export const chapters: Chapter[] = [
                 duration: "12:26",
                 link: "https://www.youtube.com/watch?v=wbBY2tTqXDA",
             },
+            {
+                title: "Function Notation by Khan Academy",
+                duration: "13:41",
+                link: "https://www.youtube.com/watch?v=kvGsIo1TmsM",
+            },
         ],
     },
     {
@@ -66,6 +99,11 @@ export const chapters: Chapter[] = [
                 duration: "12:38",
                 link: "https://www.youtube.com/watch?v=yaOf7ioCgFQ"
             },
+            {
+                title: "Slope Intercept Form & Point Slope Form by Khan Academy",
+                duration: "18:23",
+                link: "https://www.youtube.com/watch?v=K_OI9LA54AA",
+            },
         ],
     },
     {
@@ -81,6 +119,12 @@ export const miscResources: MiscResource[] = [
         title: "Financial Literacy Simulator",
         description: "Interactive budgeting and financial planning tool",
         link: "https://financial-literacy-simulator.jaydenwong.ca",
+        external: true,
+    },
+    {
+        title: "Conversion Formula Sheet",
+        description: "Reference sheet for unit conversions and formulas",
+        link: "https://drive.google.com/file/d/193fiiD2w9NZpXVDdskVyUWoCAaZ4RGIe/view?usp=sharing",
         external: true,
     },
 ];
