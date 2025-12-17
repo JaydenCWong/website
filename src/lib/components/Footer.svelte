@@ -2,8 +2,16 @@
     const currentYear = new Date().getFullYear();
 
     const socialLinks = [
-        { name: "GitHub", href: "#", icon: "github" },
-        { name: "LinkedIn", href: "#", icon: "linkedin" },
+        {
+            name: "GitHub",
+            href: "https://github.com/JaydenCWong",
+            icon: "github",
+        },
+        {
+            name: "LinkedIn",
+            href: "https://www.linkedin.com/in/jaydencwong/",
+            icon: "linkedin",
+        },
     ];
 </script>
 
@@ -18,6 +26,12 @@
             <a href="/#courses" class="footer-link">Courses</a>
             <a href="/#projects" class="footer-link">Projects</a>
             <a href="/#contact" class="footer-link">Contact</a>
+            <a
+                href="https://mrwongblog.blogspot.com"
+                class="footer-link"
+                target="_blank"
+                rel="noopener noreferrer">Blog</a
+            >
         </div>
         <div class="footer-social">
             {#each socialLinks as social}
@@ -25,6 +39,8 @@
                     href={social.href}
                     class="social-link"
                     aria-label={social.name}
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
                     {#if social.icon === "github"}
                         <svg
