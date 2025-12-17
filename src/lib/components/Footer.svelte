@@ -26,12 +26,7 @@
             <a href="/#courses" class="footer-link">Courses</a>
             <a href="/#projects" class="footer-link">Projects</a>
             <a href="/#contact" class="footer-link">Contact</a>
-            <a
-                href="https://mrwong-mathblog.blogspot.com"
-                class="footer-link"
-                target="_blank"
-                rel="noopener noreferrer">Blog</a
-            >
+            <a href="/blog" class="footer-link">Blog</a>
         </div>
         <div class="footer-social">
             {#each socialLinks as social}

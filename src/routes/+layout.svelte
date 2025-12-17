@@ -67,11 +67,7 @@
 		{ href: "/#projects", label: "Projects" },
 		{ href: "/#about", label: "About" },
 		{ href: "/#contact", label: "Contact" },
-		{
-			href: "https://mrwong-mathblog.blogspot.com",
-			label: "Blog",
-			external: true,
-		},
+		{ href: "/blog", label: "Blog" },
 	];
 
 	function toggleMobileMenu() {
@@ -135,8 +131,6 @@
 						class="nav-link"
 						class:active={page.url.pathname === link.href}
 						onclick={closeMobileMenu}
-						target={link.external ? "_blank" : undefined}
-						rel={link.external ? "noopener noreferrer" : undefined}
 					>
 						{link.label}
 					</a>
