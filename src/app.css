@@ -275,17 +275,40 @@ img {
 /* Mobile menu */
 .nav-toggle {
     display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-    padding: var(--space-sm);
+    border: none;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.05);
+    transition: all var(--transition-fast);
+}
+
+.nav-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-toggle:hover span {
+    background: var(--color-accent);
+}
+
+:root[data-theme="light"] .nav-toggle {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+:root[data-theme="light"] .nav-toggle:hover {
+    background: rgba(0, 0, 0, 0.1);
 }
 
 .nav-toggle span {
     display: block;
-    width: 24px;
+    width: 18px;
     height: 2px;
-    background: var(--color-text-primary);
+    background: var(--color-text-secondary);
     transition: all var(--transition-fast);
 }
 
