@@ -67,6 +67,12 @@
 		{ href: "/#projects", label: "Projects" },
 		{ href: "/#about", label: "About" },
 		{ href: "/#contact", label: "Contact" },
+		// TODO: Update with your actual Blogger URL when created
+		{
+			href: "https://mrwongblog.blogspot.com",
+			label: "Blog",
+			external: true,
+		},
 	];
 
 	function toggleMobileMenu() {
@@ -87,10 +93,33 @@
 </script>
 
 <svelte:head>
+	<!-- Primary Meta Tags -->
 	<meta
 		name="description"
-		content="Mr. Wong - Math Teacher & Software Developer"
+		content="Mr. Wong - Math Teacher & Software Developer based in British Columbia. Teaching Math 10 and Calculus 12 with clear explanations and practical examples."
 	/>
+	<meta name="author" content="Mr. Wong" />
+	<meta name="theme-color" content="#3b82f6" />
+
+	<!-- Open Graph / Facebook / LinkedIn / Discord -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Mr. Wong | Math Teacher & Developer" />
+	<meta
+		property="og:description"
+		content="Math Teacher & Software Developer based in British Columbia. Access course materials, worksheets, and video lessons for Math 10 and Calculus 12."
+	/>
+	<meta property="og:site_name" content="Mr. Wong" />
+	<meta property="og:url" content="https://jaydenwong.ca" />
+	<meta property="og:image" content="https://jaydenwong.ca/og-preview.png" />
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Mr. Wong | Math Teacher & Developer" />
+	<meta
+		name="twitter:description"
+		content="Math Teacher & Software Developer based in British Columbia. Access course materials for Math 10 and Calculus 12."
+	/>
+	<meta name="twitter:image" content="https://jaydenwong.ca/og-preview.png" />
 </svelte:head>
 
 <nav class="nav">
@@ -107,6 +136,8 @@
 						class="nav-link"
 						class:active={page.url.pathname === link.href}
 						onclick={closeMobileMenu}
+						target={link.external ? "_blank" : undefined}
+						rel={link.external ? "noopener noreferrer" : undefined}
 					>
 						{link.label}
 					</a>
