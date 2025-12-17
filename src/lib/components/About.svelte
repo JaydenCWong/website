@@ -1,14 +1,15 @@
 <script lang="ts">
     const skills = [
-        "JavaScript",
         "TypeScript",
+        "JavaScript",
+        "Java",
+        "C++",
         "Python",
         "SvelteKit",
-        "React",
-        "Node.js",
-        "CSS",
+        "Android",
+        "Chart.js",
+        "Firebase",
         "Git",
-        "SQL",
     ];
 </script>
 
@@ -19,8 +20,9 @@
                 <h2 class="section-title">About Me</h2>
                 <div class="about-description">
                     <p>
-                        Hi! I'm <strong>Mr. Wong</strong>, a math teacher and
-                        software developer based in British Columbia, Canada.
+                        Hi! I'm <strong>Mr. Wong</strong>, a math/computer
+                        science teacher candidate and software developer based
+                        in British Columbia, Canada.
                     </p>
                     <p>
                         I currently teach <strong>Math 10</strong> and
