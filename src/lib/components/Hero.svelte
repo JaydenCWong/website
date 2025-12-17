@@ -18,11 +18,6 @@
                 <a href="#projects" class="btn btn-secondary">See Projects</a>
             </div>
         </div>
-        <div class="hero-image">
-            <div class="hero-image-wrapper">
-                <img src="/jayden-wong.png" alt="Jayden Wong" />
-            </div>
-        </div>
     </div>
 </section>
 
@@ -55,10 +50,14 @@
     }
 
     .hero-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-4xl);
+        display: flex;
+        justify-content: center;
         align-items: center;
+    }
+
+    .hero-text {
+        text-align: center;
+        max-width: 700px;
     }
 
     .hero-greeting {
@@ -88,7 +87,9 @@
         color: var(--color-text-secondary);
         line-height: 1.7;
         margin-bottom: var(--space-2xl);
-        max-width: 500px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero-subtitle strong {
@@ -99,64 +100,6 @@
         display: flex;
         gap: var(--space-md);
         flex-wrap: wrap;
-    }
-
-    .hero-image {
-        display: flex;
         justify-content: center;
-        align-items: center;
-    }
-
-    .hero-image-wrapper {
-        width: 320px;
-        height: 320px;
-        border-radius: 50%;
-        overflow: hidden;
-        border: 3px solid var(--color-border-hover);
-        box-shadow:
-            var(--shadow-glow),
-            0 0 60px rgba(59, 130, 246, 0.2);
-        animation: float 6s ease-in-out infinite;
-    }
-
-    .hero-image-wrapper img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    @keyframes float {
-        0%,
-        100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-10px);
-        }
-    }
-
-    @media (max-width: 768px) {
-        .hero-content {
-            grid-template-columns: 1fr;
-            text-align: center;
-        }
-
-        .hero-subtitle {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-cta {
-            justify-content: center;
-        }
-
-        .hero-image {
-            order: -1;
-        }
-
-        .hero-image-wrapper {
-            width: 200px;
-            height: 200px;
-        }
     }
 </style>

@@ -96,11 +96,6 @@
 <nav class="nav">
 	<div class="container nav-content">
 		<a href="/" class="nav-logo">
-			<img
-				src="/jayden-wong.png"
-				alt="Jayden Wong"
-				class="nav-logo-img"
-			/>
 			<span class="nav-logo-text">Jayden Wong</span>
 		</a>
 
