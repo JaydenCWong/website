@@ -27,7 +27,7 @@
             <a href="/#projects" class="footer-link">Projects</a>
             <a href="/#contact" class="footer-link">Contact</a>
             <a
-                href="https://mrwongblog.blogspot.com"
+                href="https://mrwong-mathblog.blogspot.com"
                 class="footer-link"
                 target="_blank"
                 rel="noopener noreferrer">Blog</a

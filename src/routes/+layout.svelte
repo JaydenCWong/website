@@ -67,9 +67,8 @@
 		{ href: "/#projects", label: "Projects" },
 		{ href: "/#about", label: "About" },
 		{ href: "/#contact", label: "Contact" },
-		// TODO: Update with your actual Blogger URL when created
 		{
-			href: "https://mrwongblog.blogspot.com",
+			href: "https://mrwong-mathblog.blogspot.com",
 			label: "Blog",
 			external: true,
 		},
