@@ -7,6 +7,16 @@
     // The 'content' field contains searchable keywords from the post body
     const posts = [
         {
+            slug: "hidden-backend-of-teaching",
+            title: "The Hidden Back-End of Teaching",
+            date: "2025-12-17",
+            excerpt:
+                "Users only see the front-end. Students only see the lesson. But behind both lies years of invisible expertise that makes the surface work.",
+            tags: ["teaching", "programming", "learning"],
+            content:
+                "front-end back-end iceberg invisible work software development pedagogy curriculum design lesson planning classroom management assessment differentiation expertise behind the scenes unacknowledged",
+        },
+        {
             slug: "four-billion-if-statements",
             title: "4 Billion If Statements: Absurdity Becomes Interesting",
             date: "2025-12-17",
