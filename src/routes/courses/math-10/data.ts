@@ -59,6 +59,17 @@ export const chapters: Chapter[] = [
                 description: "Practice problems on irrational numbers",
                 link: "https://drive.google.com/uc?export=download&id=1UemclKkaEtrSCLwiIv7Jzw8T7pbom3M1",
             },
+            {
+                title: "4.2 - Mixed Radicals",
+                description: "Practice problems on mixed radicals",
+                link: "https://docs.google.com/document/d/1AXq4t0pZQbRAu45mbXeqTVwvUoUHfruq_z1l2uMgWVg/export?format=docx",
+            },
+            {
+                title: "4.3 - Fractional Exponents",
+                description: "Practice problems on fractional exponents",
+                link: "https://docs.google.com/document/d/1ORWDtcu51_FtjL47RqVLAYUNqMcZNaX3AZHN2k2pFyA/export?format=docx"
+            },
+
         ],
         videos: [],
     },
