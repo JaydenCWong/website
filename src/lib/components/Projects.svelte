@@ -16,7 +16,7 @@
             tags: ["C++", "Computer Graphics", "Ray Tracing"],
             link: null,
             github: "https://github.com/JaydenCWong/RayTracingInOneWeekend",
-            image: null,
+            image: "/random_scene.jpg",
         },
         {
             title: "JAAM Transit Tracker",
@@ -42,9 +42,17 @@
             {#each projects as project, i}
                 <article class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">
-                            <span>{project.title[0]}</span>
-                        </div>
+                        {#if project.image}
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                class="project-img"
+                            />
+                        {:else}
+                            <div class="project-placeholder">
+                                <span>{project.title[0]}</span>
+                            </div>
+                        {/if}
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">{project.title}</h3>
@@ -140,6 +148,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
+    }
+
+    .project-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform var(--transition-base);
+    }
+
+    .project-card:hover .project-img {
+        transform: scale(1.05);
     }
 
     .project-placeholder {
