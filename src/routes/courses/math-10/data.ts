@@ -138,4 +138,10 @@ export const miscResources: MiscResource[] = [
         link: "https://drive.google.com/file/d/193fiiD2w9NZpXVDdskVyUWoCAaZ4RGIe/view?usp=sharing",
         external: true,
     },
+    {
+        title: "Tsunami Project Case File",
+        description: "Case file for tsunami project",
+        link: "https://docs.google.com/document/d/1FP8s5NjuPifkp46SdwquiX0OB-H0hiQP/export?format=docx",
+        external: true,
+    }
 ];
